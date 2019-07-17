@@ -20,7 +20,7 @@ Here we go!
 >>> t.calculate(scores.en, scores.nz)
 (0.0034365662488090296, 1.4083674421052884e-08)
 ```
-so its less than 1% as I had thought and about 0.3%. Rare but not so rare as to be a black swan event. A black swan event has 1 in a million chances to happen.
+so its less than 1% as I had thought and about 0.3%. Rare but not so rare as to be a black swan event. A black swan event has 1 in a million chances or less to happen.
 
 If we assume all teams are more or less equally good, we can approximate the pdf much better as suddenly a lot more data points are available. If we do that we get:
 
