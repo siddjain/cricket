@@ -10,7 +10,7 @@ We create a lognormal distribution from the scores of England and do the same fo
 
 [scores.py](scores.py) contains scores of england, nz, and all the teams irrespective of nationality. We have done some filtering so as to only include scores from 50 overs matches. The scores were obtained from Google.
 
-[prob.py](prob.py) contains the code to all the calculations.
+[prob.py](prob.py) contains the code to do all the calculations.
 
 Here we go!
 
