@@ -20,7 +20,7 @@ Here we go!
 >>> t.calculate(scores.en, scores.nz)
 (0.0034365662488090296, 1.4083674421052884e-08)
 ```
-so its less than 1% as I had thought and about 0.3%. Rare but not so rare as to be a black swan event. A black swan event has 1 in a million chances or less to happen.
+so its less than 1% as my gut feeling said, and about 0.3%. Rare, but not so rare as to be a black swan event. A black swan event has 1 in a million chances or less to happen.
 
 If we assume all teams are more or less equally good, we can approximate the pdf much better as suddenly a lot more data points are available. If we do that we get:
 
@@ -29,11 +29,13 @@ If we assume all teams are more or less equally good, we can approximate the pdf
 (0.005086769066800063, 3.499114196912595e-09)
 ```
 
-0.5%
+0.5% or a 1 in 200 chance of happening
 
-According to [this](https://math.stackexchange.com/questions/3295415/what-is-the-probability-that-a-cricket-match-will-end-up-in-a-tie) link the ratio of the number of tied ODI to the total number of ODIs is 19/2096 = 0.0090 
+According to [this](https://math.stackexchange.com/questions/3295415/what-is-the-probability-that-a-cricket-match-will-end-up-in-a-tie) link the ratio of the number of tied ODI to the total number of ODIs is 19/2096 = 0.0090 or 0.9%.
+So theoretical 0.5% vs. observed 0.9%. Not bad at all. Certainly much better than calculations theoretical physicists are capable of doing 
+<a href="https://aapt.scitation.org/doi/10.1119/1.17850" target="_blank">[1]</a>. The calculations and data I compiled were admittedly done in a hurry so I wouldn't be surprised of a bug here and there.
 
 [plot.py](plot.py) contains code to plot the pdf:
 ![Probability Distribution](pdf.png "Probability Distribution of Runs")
 
-Nearly everyone was expecting England to win, but NZ gave them the chase for the Cup.
+Nearly everyone was expecting England to win, and they eventually did, but what a chase NZ gave them for the Cup!
