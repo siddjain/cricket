@@ -1,2 +1,7 @@
+.classpath
+.project
+.settings/
+.vscode/
+target/
 *.pyc
 *.swp
