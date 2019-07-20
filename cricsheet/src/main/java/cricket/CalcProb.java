@@ -2,9 +2,9 @@ package cricket;
 
 import java.io.*;
 
-public class Prob {
+public class CalcProb {
     // run from cricsheet folder:
-    // mvn exec:java -Dexec.mainClass="cricket.Prob" -Dexec.args="odi_stats.txt" > odi_prob.txt
+    // mvn exec:java -Dexec.mainClass="cricket.CalcProb" -Dexec.args="odi_stats.txt" > odi_prob.txt
     public static void main( String[] args ) {
         try {
             String filename = args[0];
