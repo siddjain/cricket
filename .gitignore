@@ -1,3 +1,4 @@
+*.code-workspace
 .classpath
 .project
 .settings/
