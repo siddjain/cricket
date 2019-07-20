@@ -3,6 +3,7 @@
 .project
 .settings/
 .vscode/
+odis/
 target/
 *.pyc
 *.swp

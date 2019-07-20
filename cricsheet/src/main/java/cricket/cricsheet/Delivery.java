@@ -8,5 +8,5 @@ public class Delivery {
     public String non_striker;
     public Runs runs;
     public Extras extras;
-    public int non_boundary;    
+    public Wicket wicket;
 }

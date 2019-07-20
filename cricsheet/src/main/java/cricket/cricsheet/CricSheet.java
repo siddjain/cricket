@@ -5,10 +5,12 @@ import java.util.*;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.dataformat.yaml.*;
 
+import cricket.Stats;
+
 public class CricSheet {
     public Meta meta;
     public Info info;
-    public List<Inning> innings;
+    public List<Inning> innings;    
 
     public static CricSheet readFromFile(String filename) {
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
@@ -21,6 +23,14 @@ public class CricSheet {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return result.toCricSheet();
+        CricSheet r = result.toCricSheet();
+        r.calcStats();
+        return r;
+    }
+
+    private void calcStats() {
+        for (Inning i : this.innings) {
+            i.calcStats();
+        }
     }
 }
