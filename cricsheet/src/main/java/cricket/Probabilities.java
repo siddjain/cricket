@@ -13,6 +13,7 @@ public class Probabilities {
     public double mean_extras;
 
     public Probabilities(Stats s) {
+        int totalBalls = s.balls + s.extraBalls;
         pZero = (double) s.zeros / s.balls;
         pOne = (double) s.ones / s.balls;
         pTwo = (double) s.twos / s.balls;

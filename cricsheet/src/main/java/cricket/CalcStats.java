@@ -7,13 +7,13 @@ import cricket.cricsheet.*;
  * Hello world!
  *
  */
-public class App 
+public class CalcStats
 {
     // First unzip odis.zip folder
     // then Run this progrsm from cricsheet folder like:
-    // mvn exec:java -Dexec.mainClass="cricket.App" -Dexec.args="../odis" > odi_stats.txt
+    // mvn exec:java -Dexec.mainClass="cricket.CalcStats" -Dexec.args="../odis" > odi_stats.txt
     // It will output following stats:
-    // Match_Inning 0s 1s 2s 3d 4s 5s 6s balls extras extra_balls wickets
+    // Match_Inning count_of_0s 1s 2s 3d 4s 5s 6s balls extra_balls wickets
     public static void main( String[] args )
     {
         String dir = args[0];                

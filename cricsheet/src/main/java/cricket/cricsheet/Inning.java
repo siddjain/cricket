@@ -12,29 +12,23 @@ public class Inning {
     public void calcStats() {
         Stats stats = new Stats();
         for (Delivery d : deliveries) {
+            int runs = d.runs.total;
             if (d.extras != null) {
-                stats.extraBalls++;
-                stats.extras += d.runs.extras;
+                // we only count wides and no balls - those balls that need to be bowled again
+                if (d.extras.noballs > 0 || d.extras.wides > 0) {
+                    stats.extraBalls++;
+                }
             } else {
                 stats.balls++;
-                if (d.wicket != null) {
-                    stats.wickets++;
-                } else if (d.runs.batsman == 0) {
-                    stats.zeros++;
-                } else if (d.runs.batsman == 1) {
-                    stats.ones++;
-                } else if (d.runs.batsman == 2) {
-                    stats.twos++;
-                } else if (d.runs.batsman == 3) {
-                    stats.threes++;
-                } else if (d.runs.batsman == 4) {
-                    stats.fours++;
-                } else if (d.runs.batsman == 5) {
-                    stats.fives++;
-                } else if (d.runs.batsman == 6) {
-                    stats.sixes++;
-                }
-            }            
+            }
+            if (d.wicket != null) {
+                stats.wickets++;
+            }
+            if (runs < stats.counts.length) {
+                stats.counts[runs]++;                                  
+            } else {
+                throw new RuntimeException("total runs = " + runs + " is greater than max allowed");
+            }
         }
         this.stats = stats;
     }
