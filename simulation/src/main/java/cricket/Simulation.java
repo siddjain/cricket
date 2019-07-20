@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Hello world!
  *
  */
-public class App 
+public class Simulation
 {    
 
     public static void main( String[] args )

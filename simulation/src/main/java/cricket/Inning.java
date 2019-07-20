@@ -32,52 +32,14 @@ public class Inning {
     }    
 
     private void bowl() {
-        switch (dice.play()) {
-            case 6:
-                // no ball; in this case a run might still be scored
-                // do that quick-and-dirty
-                playNoBall();
-                return; 
-            case 0:
-                break;  // no run
-            case 1:
-                this.runs += 1;
-                break;
-            case 2:
-                this.runs += 2;
-                break;
-            case 3:
-                this.runs += 4;
-                break;
-            case 4:
-                this.runs += 6;
-                break;
-            case 5:
-                this.wickets++; // out!
-                break;
-            default:
-                throw new RuntimeException("bug in code");
+        int i = dice.roll();
+        if (i < 8) {
+            this.runs += i;
+        } else {
+            this.wickets++;
         }
-        this.balls++;
-    }
-
-    private void playNoBall() {
-        // runs will be scored but no wicket can be claimed
-      switch (dice.play()) {
-        case 0:
-            break;  // no run
-        case 1:
-            this.runs += 1;
-            break;
-        case 2:
-            this.runs += 2;
-            break;
-        case 3:
-            this.runs += 4;
-            break;
-        case 4:
-            this.runs += 6;
-            break;
-        }
-    }
+        if (Math.random() >= config.pNoBall) {
+            this.balls++;
+        }        
+    }    
 }

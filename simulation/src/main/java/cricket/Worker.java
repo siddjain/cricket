@@ -24,7 +24,7 @@ public class Worker implements Runnable {
             Inning inning = new Inning(config);
             inning.play();
             Score score = inning.getScore();
-            // System.out.printf("%d %d %d %d %.1f\n", threadId, i, score.runs, score.wickets, (double) score.balls / 6);
+            System.out.printf("%d %d %d %d %.1f\n", threadId, i, score.runs, score.wickets, (double) score.balls / 6);
             scorecard.add(score);
         }
     }

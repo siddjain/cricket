@@ -1,7 +1,10 @@
-pZero: 1.0/6
-pOne: 1.0/6
-pTwo: 1.0/6
-pFour: 1.0/6
-pSix: 1.0/6
-pOut: 1.0/6
-pNoBall: 0
+pZero:     0.495057
+pOne:     0.326591
+pTwo:     0.053356
+pThree:     0.007383
+pFour:     0.075524
+pFive:     0.001485
+pSix:     0.012775
+pSeven:     0.000073
+pOut:     0.027753
+pNoBall:    0.027206

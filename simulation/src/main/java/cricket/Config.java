@@ -8,8 +8,11 @@ public class Config {
     public double pZero;
     public double pOne;
     public double pTwo;
+    public double pThree;
     public double pFour;
+    public double pFive;
     public double pSix;
+    public double pSeven;
     public double pOut;
     public double pNoBall;
 
@@ -26,14 +29,16 @@ public class Config {
     }
 
     public Dice createDice() {
-        double[] p = new double[7];
+        double[] p = new double[9];
         p[0] = pZero;
         p[1] = pOne;
         p[2] = pTwo;
-        p[3] = pFour;
-        p[4] = pSix;
-        p[5] = pOut;
-        p[6] = pNoBall;
+        p[3] = pThree;
+        p[4] = pFour;
+        p[5] = pFive;
+        p[6] = pSix;
+        p[7] = pSeven;
+        p[8] = pOut;
         return new Dice(p);
     }
 
@@ -41,13 +46,16 @@ public class Config {
         Util.checkBetweenZeroAndOne(pZero);
         Util.checkBetweenZeroAndOne(pOne);
         Util.checkBetweenZeroAndOne(pTwo);
+        Util.checkBetweenZeroAndOne(pThree);
         Util.checkBetweenZeroAndOne(pFour);
+        Util.checkBetweenZeroAndOne(pFive);
         Util.checkBetweenZeroAndOne(pSix);
+        Util.checkBetweenZeroAndOne(pSeven);
         Util.checkBetweenZeroAndOne(pOut);
         Util.checkBetweenZeroAndOne(pNoBall);
-        double sum = pZero + pOne + pTwo + pFour + pSix + pOut + pNoBall;
-        if (Math.abs(sum - 1.0) < 0.00001) {
-            pNoBall = 1.0 - (pZero + pOne + pTwo + pFour + pSix + pOut);
+        double sum = pZero + pOne + pTwo + pThree + pFour + pFive + pSix + pSeven + pOut;
+        if (Math.abs(sum - 1.0) < 0.0001) {            
+            pOut = 1.0 - (pZero + pOne + pTwo + pThree + pFour + pFive + pSix + pSeven);
         } else {
             throw new RuntimeException("probabilities do not sum to 1");
         }

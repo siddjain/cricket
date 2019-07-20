@@ -21,7 +21,7 @@ public class Dice {
         }
     }
 
-    public int play() {
+    public int roll() {
         double d = Math.random();
         for (int i = 0; i < runningSum.length; i++) {
             if (d < runningSum[i]) {
