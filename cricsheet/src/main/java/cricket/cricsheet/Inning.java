@@ -13,6 +13,7 @@ public class Inning {
         Stats stats = new Stats();
         for (Delivery d : deliveries) {
             int runs = d.runs.total;
+            stats.totalRuns += runs;
             if (d.extras != null && (d.extras.noballs > 0 || d.extras.wides > 0)) {
                 // we only count wides and no balls - those balls that need to be bowled again
                 stats.extraBalls++;                

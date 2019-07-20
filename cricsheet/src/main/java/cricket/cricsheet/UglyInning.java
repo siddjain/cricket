@@ -10,6 +10,7 @@ public class UglyInning {
         Inning inning = new Inning();
         inning.team = this.team;
         inning.deliveries = Util.flatten(this.deliveries);
+        inning.calcStats();
         return inning;
     }    
 }
