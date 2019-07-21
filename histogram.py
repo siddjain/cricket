@@ -3,10 +3,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import  norm
 
+# this file used to make histograms of simulated and actual runs in ODI matches
+
 def plot(file, col, start=0, stop=500, num_bins=20):
     plt.rcParams.update({'font.size': 30})
-    actual = pd.read_csv(file, sep=" ", header=None)
-    runs = actual[col]
+    df = pd.read_csv(file, sep=" ", header=None)
+    runs = df[col]
     mu = runs.mean()
     sigma = runs.std()
     pdf = lambda x: norm.pdf(x, mu, sigma)
