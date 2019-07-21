@@ -96,4 +96,23 @@ Example record:
 * Column 3: Wickets
 * Column 4: Overs
 
-This data can be used to construct a histogram of runs and compare to model
+# Calculating probability of tie
+
+This data can be used to construct a histogram of runs by [histogram.py](histogram.py)
+
+![Histogram](odi_hist.png "Histogram of Runs in ODI")
+
+A Gaussian fit gives mu=227, sigma=68. From this, we can calculate probability of a tie as
+
+```
+>>> import math
+>>> import numpy as np
+>>> from scipy.stats import lognorm, norm
+>>> import scipy.integrate as integrate
+>>> f = lambda x: norm.pdf(x,227,68)
+>>> c = lambda x: f(x) * f(x)
+>>> integrate.quad(c, 0, float("inf"))
+(0.004148447951709275, 4.359805441782799e-11)
+```
+
+0.4%
