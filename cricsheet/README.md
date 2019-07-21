@@ -98,7 +98,7 @@ Example record:
 
 # Calculating probability of tie
 
-This data can be used to construct a histogram of runs by [histogram.py](histogram.py)
+This data can be used to construct a histogram of runs by [histogram.py](../histogram.py)
 
 ![Histogram](odi_hist.png "Histogram of Runs in ODI")
 
