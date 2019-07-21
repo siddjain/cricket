@@ -20,6 +20,8 @@ Example record:
 
 Last line of `simulation.txt` calculates probability of a tie:
 ```
-Prob. of tie = 972 / 100128 = 0.0097 
+Prob. of tie = 34208 / 3960705 = 0.0086 
 ```
-The denominator is the number of matches simulated
+0.86%
+
+The denominator is the number of matches simulated. So in above we simulated 3,960,705 matches!

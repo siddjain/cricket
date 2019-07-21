@@ -9,16 +9,14 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class Simulation
 {    
-
+    // mvn exec:java -Dexec.mainClass="cricket.Simulation" -Dexec.args="config.yaml 2815" > simulation.txt
     public static void main( String[] args )
     {
         String file = args[0];
-        int totalMatches = Integer.parseInt(args[1]);        
+        int numInnings = Integer.parseInt(args[1]);        
         Config config = Config.readFromFile(file);
-        int numInnings = (int) Math.ceil(Math.sqrt(totalMatches * 2));
         int cores = Runtime.getRuntime().availableProcessors();
         System.out.printf("Found %d cores\n", cores);
-        // System.out.printf("ThreadId Innings Runs Wickets Overs\n", cores);
         Thread[] threads = new Thread[cores];
         Worker[] worker = new Worker[cores];
         AtomicInteger counter = new AtomicInteger();
