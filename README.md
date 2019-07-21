@@ -38,4 +38,3 @@ Not bad. Certainly much better than calculations theoretical physicists are capa
 [plot.py](plot.py) contains code to plot the pdf:
 ![Probability Distribution](pdf.png "Probability Distribution of Runs")
 
-Nearly everyone was expecting England to win, and they eventually did, but what a chase NZ gave them for the Cup!
